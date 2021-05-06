@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Wiper Blades</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <div v-if="wipers.length">
+    <h1>REPLACE WIPER BLADES</h1>
+<p>Front wiper blades are supplied as a "pair" unless otherwise requested, rear blades are a "single" unit. (Fitting just the individual drivers or passenger wiper blade is not recommended)</p>
+  </div>
+  <div v-if="!wipers.length" class="cart-checkout">
+    <p>Cart is empty.</p>
+  </div>
+  <div v-if="checkout" class="cart-checkout">
+    <p>Thank you for your order!</p>
+  </div>
+      <div class="wiper" v-for="wiper in wipers" :key="wiper.id">
+          <div class="description">
+            <h4>{{wiper.name}}</h3>
+          </div>
+          
+          <div class="quantity">
+            <button @click="decrease(wiper)" class="btn remove">&mdash;</button>   
+              <span :key="wiper.quantity" class="number">{{wiper.quantity}}</span>
+            <button @click="add(wiper)" class="btn add">&#xff0b;</button>
+          </div>
+      </div>
+    
+  <div class="checkout">
+    <div class="total">Total: 
+        <span :key="sum">{{sum.toFixed(2)}}</span>
+    </div>
+      <button :disabled="!wipers.length" v-if="!checkout" @click="checkoutCart">Checkout</button>
+  </div>
+</div> 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+p {
+  color: #828282;
+}
+#app {
+  position: relative;
+  width: 450px;
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.wiper {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #dddff1;
+  margin: 15px;
+  padding: 15px 30px;
+  color: #474b6d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quantity {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 52px;
+}
+.quantity button {
+  background-color: #fff;
+  border: 1px solid #dddff1;
+  height: 42px;
+}
+.quantity button.add {
+  background-color: #e1f7ef;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #27ae60;
+  border: 1px solid #219653;
+}
+.quantity button.remove {
+  color: #9da0bf;
+  background-color: #f8f8fc;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.quantity span {
+  align-content: center;
+  height: 40px;
+  border: 0;
+  border-top: 1px solid #dddff1;
+  border-bottom: 1px solid #dddff1;
+  width: 1.5rem;
+  text-align: center;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .checkout .total {
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#app .checkout .total span {
+  font-size: 24px;
+  margin-left: 9px;
+}
+#app .checkout button {
+  font-size: 18px;
+  background: #f9a100;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 100px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
